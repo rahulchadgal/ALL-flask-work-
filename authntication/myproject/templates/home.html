@@ -1,0 +1,12 @@
+{% extends block content %}
+
+{% block content %}
+<div class="jumbotron">
+{% current_user.is_authenticated %}
+<p>{{current_user.username}}</p>
+{% else %}
+<p>Please login or register</p>
+{% endif %}
+</div>
+
+{% endblock %}
